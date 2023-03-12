@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stateman92/ExceptionCatcher",
       "state" : {
-        "revision" : "9c50ab01dc439acd731330d101ec40b511f07669",
-        "version" : "2.0.7"
+        "revision" : "0f8ce30c241b3e4fec70d2cea809a1204a99abf6",
+        "version" : "2.0.8"
       }
     }
   ],
