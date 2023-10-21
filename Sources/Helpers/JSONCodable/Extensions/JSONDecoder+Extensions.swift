@@ -1,6 +1,6 @@
 //
 //  JSONDecoder+Extensions.swift
-//  
+//
 //
 //  Created by Kristof Kalai on 2022. 12. 28..
 //
@@ -28,7 +28,7 @@ extension JSONDecoder {
             decoder.nonConformingFloatDecodingStrategy = nonConformingFloatDecodingStrategy
             decoder.keyDecodingStrategy = keyDecodingStrategy
             decoder.userInfo = userInfo
-            if #available(iOS 15.0, *) {
+            if #available(iOS 15.0, macOS 12.0, *) {
                 decoder.assumesTopLevelDictionary = assumesTopLevelDictionary
                 decoder.allowsJSON5 = allowsJSON5
             }

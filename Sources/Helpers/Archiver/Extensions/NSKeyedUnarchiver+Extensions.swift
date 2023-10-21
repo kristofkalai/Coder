@@ -142,7 +142,7 @@ extension NSKeyedUnarchiver {
         }
         do {
             return try catchException {
-                if #available(iOS 14.0, *) {
+                if #available(iOS 14.0, macOS 11.0, *) {
                     guard let result: [T] = decodeArray(forKey: key) else {
                         throw CodingError.UnarchiverError.invalidData
                     }

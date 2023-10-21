@@ -1,6 +1,6 @@
 //
 //  NSCoder+Extensions.swift
-//  
+//
 //
 //  Created by Kristof Kalai on 2022. 12. 28..
 //
@@ -30,7 +30,7 @@ extension NSCoder {
         decodeObject(of: S.self, forKey: key.rawValue)
     }
 
-    @available(iOS 14.0, *)
+    @available(iOS 14.0, macOS 11.0, *)
     public func decodeArray<T: RawRepresentable, S: NSObject & NSSecureCoding>(forKey key: T) -> [S]? where T.RawValue == String {
         decodeArrayOfObjects(ofClass: S.self, forKey: key.rawValue)
     }

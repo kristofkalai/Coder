@@ -17,52 +17,52 @@ public final class Coder {
                   userInfo: [CodingUserInfoKey: Any] = [:])
         case propertyList(format: PropertyListSerialization.PropertyListFormat = .binary,
                           userInfo: [CodingUserInfoKey: Any] = [:])
-        
+
         public static var json: Self {
             .json()
         }
-        
+
         public static var propertyList: Self {
             .propertyList()
         }
     }
-    
+
     public enum EncodingType {
         case archive(outputFormat: PropertyListSerialization.PropertyListFormat = .binary,
                      key: ArchiverKey = .root)
-        
+
         public static var archive: Self {
             .archive()
         }
     }
-    
+
     public enum SecureEncodingType {
         case secureArchive(requiringSecureCoding: Bool = true,
                            outputFormat: PropertyListSerialization.PropertyListFormat = .binary,
                            key: ArchiverKey = .root)
-        
+
         public static var secureArchive: Self {
             .secureArchive()
         }
     }
-    
+
     public enum DecodingType {
         case archive(key: ArchiverKey = .root)
-        
+
         public static var archive: Self {
             .archive()
         }
     }
-    
+
     public enum SecureDecodingType {
         case secureArchive(requiringSecureCoding: Bool = true,
                            key: ArchiverKey = .root)
-        
+
         public static var secureArchive: Self {
             .secureArchive()
         }
     }
-    
+
     public enum DecodableType {
         case json(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
                   dataDecodingStrategy: JSONDecoder.DataDecodingStrategy = .base64,
@@ -73,20 +73,20 @@ public final class Coder {
                   assumesTopLevelDictionary: Bool = false)
         case propertyList(format: PropertyListSerialization.PropertyListFormat = .binary,
                           userInfo: [CodingUserInfoKey: Any] = [:])
-        
+
         public static var json: Self {
             .json()
         }
-        
+
         public static var propertyList: Self {
             .propertyList()
         }
     }
-    
+
     private lazy var jsonCoder = JSONCoder()
     private lazy var propertyListCoder = PropertyListCoder()
     private lazy var keyedArchiver = KeyedArchiver()
-    
+
     public init() {}
 }
 

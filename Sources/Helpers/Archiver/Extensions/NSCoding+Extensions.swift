@@ -1,6 +1,6 @@
 //
 //  NSCoding+Extensions.swift
-//  
+//
 //
 //  Created by Kristof Kalai on 2022. 12. 28..
 //
@@ -14,14 +14,14 @@ extension NSCoding where Self: NSObject {
     ) -> Data {
         NSKeyedArchiver.archive(self, outputFormat: outputFormat, forKey: key)
     }
-    
+
     public static func unarchive(
         _ data: Data?,
         forKey key: ArchiverKey = .root
     ) -> Result<Self, Error> {
         NSKeyedUnarchiver.unarchive(data, forKey: key)
     }
-    
+
     public static func unarchive(
         _ data: Data?,
         forKey key: ArchiverKey = .root
@@ -37,14 +37,14 @@ extension Array where Element: NSObject & NSCoding {
     ) -> Data {
         NSKeyedArchiver.archive(self, outputFormat: outputFormat, forKey: key)
     }
-    
+
     public static func unarchive(
         _ data: Data?,
         forKey key: ArchiverKey = .root
     ) -> Result<[Element], Error> {
         NSKeyedUnarchiver.unarchive(data, forKey: key)
     }
-    
+
     public static func unarchive(
         _ data: Data?,
         forKey key: ArchiverKey = .root
